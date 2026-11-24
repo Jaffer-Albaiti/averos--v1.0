@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171b20">
+  <meta name="description" content="Discover East African creativity. Explore artists, discover original work and connect with the people behind it.">
+  <title>AVEROS — Creativity Without Boundaries</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">A new space for East African creativity <span>·</span> <a href="#artists">Meet the artists</a></div>
+  <header class="site-header">
+    <a class="wordmark" href="#" aria-label="Averos home">AVEROS<span>.</span></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a class="active" href="#discover">Discover</a>
+      <a href="#artists">Artists</a>
+      <a href="#about">Our vision</a>
+    </nav>
+    <div class="header-actions">
+      <button class="text-button" id="savedToggle" type="button">Saved <span id="savedCount">0</span></button>
+      <a class="button button-dark button-small" href="#join">Join as an artist</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="about">
+      <div class="hero-copy">
+        <p class="eyebrow">THE CREATIVE MARKETPLACE</p>
+        <h1>Good work<br><em>deserves to be seen.</em></h1>
+        <p class="hero-description">Discover independent artists, explore original work and connect with creative talent across East Africa and beyond.</p>
+        <div class="hero-actions">
+          <a class="button button-light" href="#discover">Explore the work <span>↗</span></a>
+          <a class="underlined-link" href="#join">I'm an artist</a>
+        </div>
+        <div class="hero-note"><span class="note-dot"></span> A growing home for independent creativity</div>
+      </div>
+      <div class="hero-art" aria-label="Abstract artwork collage">
+        <div class="art-orbit"></div>
+        <div class="hero-art-card card-one"><img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=800&q=85" alt="Colourful abstract painting"></div>
+        <div class="hero-art-card card-two"><img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=700&q=85" alt="Modern abstract artwork"></div>
+        <div class="hero-art-card card-three"><img src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=600&q=85" alt="Expressive contemporary art"></div>
+        <div class="floating-label"><span>01 / 04</span><strong>Art without borders.</strong></div>
+      </div>
+    </section>
+
+    <section class="discover section-wrap" id="discover">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE COLLECTION</p><h2>Find your next <em>inspiration.</em></h2></div>
+        <p class="section-aside">A selection of work from emerging and independent creatives.</p>
+      </div>
+      <div class="toolbar">
+        <label class="search-box"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Search artwork, artists or places..." aria-label="Search artwork, artists or places"></label>
+        <div class="filters" id="filters" aria-label="Filter artwork">
+          <button class="filter active" data-filter="All">All work</button>
+          <button class="filter" data-filter="Painting">Painting</button>
+          <button class="filter" data-filter="Digital">Digital</button>
+          <button class="filter" data-filter="Photography">Photography</button>
+          <button class="filter" data-filter="Sculpture">Sculpture</button>
+        </div>
+      </div>
+      <div class="results-line"><span id="resultCount">6 works</span><span>Selected for you <b>✳</b></span></div>
+      <div class="art-grid" id="artGrid"></div>
+      <div class="empty-state" id="emptyState" hidden><div>✳</div><h3>No work found</h3><p>Try another search or choose a different category.</p><button class="button button-dark" id="clearSearch">Clear filters</button></div>
+    </section>
+
+    <section class="artist-callout" id="join">
+      <div class="callout-mark">A.</div>
+      <div><p class="eyebrow">YOUR WORK. YOUR AUDIENCE.</p><h2>Make room for<br><em>what you create.</em></h2><p>Build your presence, share your portfolio and let the right people discover your work.</p></div>
+      <a class="button button-light" href="mailto:hello@averos.art?subject=Artist%20beta%20interest">Register your interest <span>↗</span></a>
+    </section>
+
+    <section class="artists-section section-wrap" id="artists">
+      <div class="section-heading"><div><p class="eyebrow">THE PEOPLE BEHIND THE WORK</p><h2>Meet the <em>creatives.</em></h2></div><p class="section-aside">The artists make the platform. We're building a place to help them thrive.</p></div>
+      <div class="artist-strip">
+        <div class="artist-mini"><div class="avatar avatar-a">AM</div><div><strong>Amara M.</strong><span>Painter · Kampala</span></div></div>
+        <div class="artist-mini"><div class="avatar avatar-b">DK</div><div><strong>Daniel K.</strong><span>Digital artist · Nairobi</span></div></div>
+        <div class="artist-mini"><div class="avatar avatar-c">ZN</div><div><strong>Zuri N.</strong><span>Photographer · Kigali</span></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="wordmark footer-logo" href="#">AVEROS<span>.</span></a>
+    <p>Creativity without boundaries.</p>
+    <div class="footer-links"><a href="#discover">Discover</a><a href="#artists">Artists</a><a href="mailto:hello@averos.art">Contact</a></div>
+    <small>© <span id="year"></span> AVEROS. Built for creative possibility.</small>
+  </footer>
+
+  <dialog class="art-dialog" id="artDialog">
+    <button class="dialog-close" id="dialogClose" aria-label="Close artwork details">×</button>
+    <div id="dialogContent"></div>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>
